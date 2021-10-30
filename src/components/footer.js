@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-top">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6 footer-info">
+            <div className="col-lg-6 col-md-6 footer-info">
               <img src="assets/img/logo.png" alt="TheEvenet" />
               <p>
                 In alias aperiam. Placeat tempore facere. Officiis voluptate
@@ -16,31 +16,6 @@ function Footer() {
                 quis. In inventore consequatur ad voluptate cupiditate debitis
                 accusamus repellat cumque.
               </p>
-            </div>
-
-            <div className="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i className="bi bi-chevron-right"></i> <a href="#">Home</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="#">About us</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="#">Terms of service</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="#">Privacy policy</a>
-                </li>
-              </ul>
             </div>
 
             <div className="col-lg-3 col-md-6 footer-links">
