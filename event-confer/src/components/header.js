@@ -1,72 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Header() {
-  return (
-    <>
-      <header id="header" class="d-flex align-items-center ">
-        <div class="container-fluid container-xxl d-flex align-items-center">
-          <div id="logo" class="me-auto">
-            <a href="index.html" class="scrollto">
-              <img src="assets/img/logo.png" alt="" title="" />
-            </a>
-          </div>
+  const [header, setHeader] = useState(false);
 
-          <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-              <li>
-                <a class="nav-link scrollto active" href="#hero">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#about">
-                  About
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#speakers">
-                  Speakers
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#schedule">
-                  Schedule
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#venue">
-                  Venue
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#hotels">
-                  Hotels
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#gallery">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#supporters">
-                  Sponsors
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="#contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-          <a class="buy-tickets scrollto" href="#buy-tickets">
-            Buy Tickets
-          </a>
+  const changeBackground = () => {
+    if (window.scrollY > 100) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
+
+  return (
+    <header
+      id="header"
+      className={
+        header
+          ? "d-flex align-items-center header-scrolled"
+          : "d-flex align-items-center"
+      }
+    >
+      <div className="container-fluid container-xxl d-flex align-items-center">
+        <div id="logo" className="me-auto">
+          {/* <a href="index.html" className="scrollto">
+            <img src="assets/img/logo.png" alt="" title="" />
+          </a> */}
+          <h1>
+            <a href="index.html">
+              The<span>Event</span>
+            </a>
+          </h1>
         </div>
-      </header>
-    </>
+
+        <nav id="navbar" className="navbar order-last order-lg-0">
+          <ul>
+            <li>
+              <a className="nav-link scrollto" href="#hero">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="nav-link scrollto" href="#about">
+                About
+              </a>
+            </li>
+            <li>
+              <a className="nav-link scrollto" href="#speakers">
+                Speakers
+              </a>
+            </li>
+            <li>
+              <a className="nav-link scrollto" href="#schedule">
+                Schedule
+              </a>
+            </li>
+            <li>
+              <a className="nav-link scrollto" href="#venue">
+                Venue
+              </a>
+            </li>
+            <li>
+              <a className="nav-link scrollto" href="#hotels">
+                Hotels
+              </a>
+            </li>
+            {/* <li>
+              <a className="nav-link scrollto" href="#gallery">
+                Gallery
+              </a>
+            </li> */}
+            <li>
+              <a className="nav-link scrollto" href="#supporters">
+                Sponsors
+              </a>
+            </li>
+            <li>
+              <a className="nav-link scrollto" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <i className="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        {/* <a className="buy-tickets scrollto" href="#buy-tickets">
+          Buy Tickets
+        </a> */}
+      </div>
+    </header>
   );
 }
 
